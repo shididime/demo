@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .cc-status-wrap{
+        display: block;
+        width: 100%;
+        color: white;
+       
+    }
+    .cc-status-wrap li{
+        height: 40px; 
+    }
+    .cc-status-second{
+        height: 40px;
+    }
+      .cc-status-second li{
+       float: left;
+       width: 33%;
+       height: 40px;
+       line-height: 40px;
+       background-color: darksalmon;
+    }
+    #container{
+        height: 40px;
+        overflow: hidden;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <ul id="upbody" class="cc-status-wrap">
+            <li>
+                <ul class="cc-status-second">
+                    <li>a1分钟前 俞*登记了1件绘画作品</li>
+                    <li>2分钟前 祁**登记了1件卡通形象</li>
+                    <li>5分钟前 和**登记了1件商业计划书</li>
+                </ul>
+            </li>
+            <li>
+                <ul class="cc-status-second">
+                    <li>b6分钟前 贝*登记了1件平面网页设计</li>
+                    <li>7分钟前 和**登记了1件剧本</li>
+                    <li>10分钟前 岑*登记了1件论文稿</li>
+                </ul>
+            </li>
+            <li>
+                <ul class="cc-status-second">
+                    <li>c12分钟前 柏*登记了1件工程设计图</li>
+                    <li>12分钟前 岑*登记了1件摄影作品</li>
+                    <li>15分钟前 伏**登记了1件诗歌作品</li>
+                </ul>
+            </li>
+            <li>
+                <ul class="cc-status-second">
+                    <li>d15分钟前 鲁*登记了1件小说</li>
+                    <li>15分钟前 于**登记了1件服装设计图</li>
+                    <li>16分钟前 郝*登记了1件工程图</li>
+                </ul>
+            </li>
+            <li>
+                <ul class="cc-status-second">
+                    <li>e18分钟前 许*登记了1件logo设计图</li>
+                    <li>19分钟前 薛**登记了1件音乐作品</li>
+                    <li>20分钟前 谢**登记了1件漫画</li>
+                </ul>
+            </li>
+            <li>
+                <ul class="cc-status-second">
+                    <li>f23分钟前 穆*寒登记了1件课件PPT</li>
+                    <li>25分钟前 常*佳登记了1件歌词</li>
+                    <li>25分钟前 昌*登记了1件个人写真</li>
+                </ul>
+            </li>
+        </ul>
+        <ul id="upbody" class="cc-status-wrap">
+            <li>
+                <ul class="cc-status-second">
+                    <li>a1分钟前 俞*登记了1件绘画作品</li>
+                    <li>2分钟前 祁**登记了1件卡通形象</li>
+                    <li>5分钟前 和**登记了1件商业计划书</li>
+                </ul>
+            </li>
+            <li>
+                <ul class="cc-status-second">
+                    <li>b6分钟前 贝*登记了1件平面网页设计</li>
+                    <li>7分钟前 和**登记了1件剧本</li>
+                    <li>10分钟前 岑*登记了1件论文稿</li>
+                </ul>
+            </li>
+            <li>
+                <ul class="cc-status-second">
+                    <li>c12分钟前 柏*登记了1件工程设计图</li>
+                    <li>12分钟前 岑*登记了1件摄影作品</li>
+                    <li>15分钟前 伏**登记了1件诗歌作品</li>
+                </ul>
+            </li>
+            <li>
+                <ul class="cc-status-second">
+                    <li>d15分钟前 鲁*登记了1件小说</li>
+                    <li>15分钟前 于**登记了1件服装设计图</li>
+                    <li>16分钟前 郝*登记了1件工程图</li>
+                </ul>
+            </li>
+            <li>
+                <ul class="cc-status-second">
+                    <li>e18分钟前 许*登记了1件logo设计图</li>
+                    <li>19分钟前 薛**登记了1件音乐作品</li>
+                    <li>20分钟前 谢**登记了1件漫画</li>
+                </ul>
+            </li>
+            <li>
+                <ul class="cc-status-second">
+                    <li>f23分钟前 穆*寒登记了1件课件PPT</li>
+                    <li>25分钟前 常*佳登记了1件歌词</li>
+                    <li>25分钟前 昌*登记了1件个人写真</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        window.onload = function () {
+            var box = document.getElementById("container");
+            var list = document.getElementById("upbody");
+            var lastlist = list.cloneNode(true);
+            box.appendChild(lastlist);
+            function up() {
+                if (box.scrollTop >= list.clientHeight) {
+                    box.scrollTop = 0;
+                } else {
+                    box.scrollTop++;
+                }
+            }
+            setInterval(up, 50);
+        }
+    </script>
+</body>
+
+</html>
